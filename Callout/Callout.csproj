@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <Authors>Esri</Authors>
+    <Company>Esri</Company>
+    <Description>Minimal application to test Stream Layer functionality.</Description>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Configurations>Debug;Release</Configurations>
+    <ApplicationIcon>demo.ico</ApplicationIcon>
+    <RuntimeNugetPackageVersion>200.3.0</RuntimeNugetPackageVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Esri.ArcGISRuntime" Version="$(RuntimeNugetPackageVersion)" />
+    <PackageReference Include="Esri.ArcGISRuntime.WPF" Version="$(RuntimeNugetPackageVersion)" />
+  </ItemGroup>
+
+</Project>

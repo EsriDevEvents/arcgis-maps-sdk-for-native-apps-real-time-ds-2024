@@ -1,0 +1,34 @@
+﻿<Window x:Class="Callout.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013"
+        xmlns:local="clr-namespace:Callout"
+        mc:Ignorable="d" 
+        Title="Dynamic Entity Callout Demo" WindowState="Maximized" Width="1200" Height="600"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <Grid>
+        <esri:MapView x:Name="_mapView" Map="{Binding Map}" />
+
+        <GroupBox Width="250" Margin="16" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <GroupBox.Header>
+                <TextBlock Text="Options" FontSize="14" FontWeight="Bold" />
+            </GroupBox.Header>
+
+            <Border Background="White" BorderBrush="Black" BorderThickness="1">
+                <StackPanel Margin="8">
+                    <DockPanel Margin="0,0,0,8">
+                        <TextBlock DockPanel.Dock="Left" Text="Use: " VerticalAlignment="Center" FontWeight="SemiBold" Margin="0,0,4,0" />
+                        <ComboBox SelectedIndex="0" SelectionChanged="Mode_SelectionChanged">
+                            <ComboBoxItem>Dynamic Entity Observation</ComboBoxItem>
+                            <ComboBoxItem>Dynamic Entity</ComboBoxItem>
+                        </ComboBox>
+                    </DockPanel>
+                    <CheckBox Content="Show Selection" IsChecked="{Binding ShowSelection, Mode=TwoWay}" Margin="0,0,0,8" />
+                    <CheckBox Content="Show Callout" IsChecked="{Binding ShowCallout, Mode=TwoWay}" />
+                </StackPanel>
+            </Border>
+        </GroupBox>
+    </Grid>
+</Window>
