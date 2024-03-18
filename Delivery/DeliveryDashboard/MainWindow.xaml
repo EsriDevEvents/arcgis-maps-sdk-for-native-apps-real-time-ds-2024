@@ -1,0 +1,74 @@
+﻿<Window x:Class="DeliveryDashboard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013"
+        xmlns:local="clr-namespace:DeliveryDashboard"
+        mc:Ignorable="d"
+        Title="Warehouse Delivery Dashboard" Width="1200" Height="650" Top="0">
+    <Grid>
+        <esri:MapView x:Name="_mapView" GeoViewTapped="GeoViewTapped" />
+
+        <Expander HorizontalAlignment="Right" VerticalAlignment="Top" Margin="24" Padding="4" Width="250"
+                  IsExpanded="False" Background="White">
+            <Expander.Header>
+                <TextBlock Text="Company Statistics" FontSize="14" FontWeight="Bold" />
+            </Expander.Header>
+            <ListView x:Name="_statisticsPanel">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                        <Setter Property="Padding" Value="0" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="{Binding BackgroundBrush}" Padding="4,2">
+                            <DockPanel>
+                                <DockPanel DockPanel.Dock="Left" Margin="4" VerticalAlignment="Center" Width="50">
+                                    <TextBlock Text="{Binding Company}" FontWeight="Bold" HorizontalAlignment="Center" />
+                                </DockPanel>
+
+                                <DockPanel Margin="4">
+                                    <DockPanel DockPanel.Dock="Top">
+                                        <Border DockPanel.Dock="Bottom" BorderBrush="WhiteSmoke" BorderThickness="0,0,0,1" Margin="0,1" />
+
+                                        <DockPanel DockPanel.Dock="Left">
+                                            <TextBlock DockPanel.Dock="Left" Text="Deliveries" Margin="0,0,8,0" />
+                                            <TextBlock Text="{Binding TotalDeliveries}" FontWeight="Bold" />
+                                        </DockPanel>
+
+                                        <DockPanel HorizontalAlignment="Right">
+                                            <TextBlock DockPanel.Dock="Left" Text="Active" Margin="0,0,8,0" />
+                                            <TextBlock Text="{Binding ActiveCount}" FontWeight="Bold" />
+                                        </DockPanel>
+                                    </DockPanel>
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Max Speed" Margin="0,0,8,0" />
+                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding MaxSpeed, StringFormat='{}{0:N2} mph'}" FontWeight="Bold"
+                                                       HorizontalAlignment="Right"/>
+
+                                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Active Payload" Margin="0,0,8,0" />
+                                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding ActivePayloadWeight, StringFormat='{}{0:N0} lbs'}" FontWeight="Bold" 
+                                                       HorizontalAlignment="Right" />
+                                    </Grid>
+                                </DockPanel>
+                            </DockPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Expander>
+    </Grid>
+</Window>

@@ -1,0 +1,72 @@
+﻿{
+  "defaultSymbol": {
+    "angle": 0.0,
+    "color": [ 0, 0, 0, 255 ],
+    "size": 3.0,
+    "style": "esriSMSCircle",
+    "type": "esriSMS",
+    "xoffset": 0.0,
+    "yoffset": 0.0
+  },
+  "field1": "Company",
+  "fieldDelimiter": ",",
+  "type": "uniqueValue",
+  "uniqueValueInfos": [
+    {
+      "description": "Red",
+      "label": "Red",
+      "symbol": {
+        "angle": 0.0,
+        "color": [ 255, 0, 0, 255 ],
+        "size": 3.0,
+        "style": "esriSMSCircle",
+        "type": "esriSMS",
+        "xoffset": 0.0,
+        "yoffset": 0.0
+      },
+      "value": "1"
+    },
+    {
+      "description": "Blue",
+      "label": "Blue",
+      "symbol": {
+        "angle": 0.0,
+        "color": [ 0, 0, 255, 255 ],
+        "size": 3.0,
+        "style": "esriSMSCircle",
+        "type": "esriSMS",
+        "xoffset": 0.0,
+        "yoffset": 0.0
+      },
+      "value": "2"
+    },
+    {
+      "description": "Green",
+      "label": "Green",
+      "symbol": {
+        "angle": 0.0,
+        "color": [ 0, 128, 0, 255 ],
+        "size": 3.0,
+        "style": "esriSMSCircle",
+        "type": "esriSMS",
+        "xoffset": 0.0,
+        "yoffset": 0.0
+      },
+      "value": "3"
+    },
+    {
+      "description": "Purple",
+      "label": "Purple",
+      "symbol": {
+        "angle": 0.0,
+        "color": [ 128, 0, 128, 255 ],
+        "size": 3.0,
+        "style": "esriSMSCircle",
+        "type": "esriSMS",
+        "xoffset": 0.0,
+        "yoffset": 0.0
+      },
+      "value": "4"
+    }
+  ]
+}

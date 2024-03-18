@@ -7,6 +7,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simple", "Simple\Simple.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Callout", "Callout\Callout.csproj", "{24F62D3E-7B8B-411D-B1C9-F1FFEE86D50C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Delivery", "Delivery", "{163663EC-7245-42AF-8603-D6886C03885E}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DeliveryShared", "Delivery\DeliveryShared\DeliveryShared.shproj", "{A451B3A6-B608-480C-BA33-2952815E31CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeliverySimulator", "Delivery\DeliverySimulator\DeliverySimulator.csproj", "{8956FDC3-41AB-41D7-A9C6-16A887E5E8F8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeliveryDashboard", "Delivery\DeliveryDashboard\DeliveryDashboard.csproj", "{22DA6201-2126-4547-877D-8A5C89E3CF30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,11 +49,45 @@ Global
 		{24F62D3E-7B8B-411D-B1C9-F1FFEE86D50C}.Release|x64.Build.0 = Release|x64
 		{24F62D3E-7B8B-411D-B1C9-F1FFEE86D50C}.Release|x86.ActiveCfg = Release|x86
 		{24F62D3E-7B8B-411D-B1C9-F1FFEE86D50C}.Release|x86.Build.0 = Release|x86
+		{8956FDC3-41AB-41D7-A9C6-16A887E5E8F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8956FDC3-41AB-41D7-A9C6-16A887E5E8F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8956FDC3-41AB-41D7-A9C6-16A887E5E8F8}.Debug|x64.ActiveCfg = Debug|x64
+		{8956FDC3-41AB-41D7-A9C6-16A887E5E8F8}.Debug|x64.Build.0 = Debug|x64
+		{8956FDC3-41AB-41D7-A9C6-16A887E5E8F8}.Debug|x86.ActiveCfg = Debug|x86
+		{8956FDC3-41AB-41D7-A9C6-16A887E5E8F8}.Debug|x86.Build.0 = Debug|x86
+		{8956FDC3-41AB-41D7-A9C6-16A887E5E8F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8956FDC3-41AB-41D7-A9C6-16A887E5E8F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8956FDC3-41AB-41D7-A9C6-16A887E5E8F8}.Release|x64.ActiveCfg = Release|x64
+		{8956FDC3-41AB-41D7-A9C6-16A887E5E8F8}.Release|x64.Build.0 = Release|x64
+		{8956FDC3-41AB-41D7-A9C6-16A887E5E8F8}.Release|x86.ActiveCfg = Release|x86
+		{8956FDC3-41AB-41D7-A9C6-16A887E5E8F8}.Release|x86.Build.0 = Release|x86
+		{22DA6201-2126-4547-877D-8A5C89E3CF30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22DA6201-2126-4547-877D-8A5C89E3CF30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22DA6201-2126-4547-877D-8A5C89E3CF30}.Debug|x64.ActiveCfg = Debug|x64
+		{22DA6201-2126-4547-877D-8A5C89E3CF30}.Debug|x64.Build.0 = Debug|x64
+		{22DA6201-2126-4547-877D-8A5C89E3CF30}.Debug|x86.ActiveCfg = Debug|x86
+		{22DA6201-2126-4547-877D-8A5C89E3CF30}.Debug|x86.Build.0 = Debug|x86
+		{22DA6201-2126-4547-877D-8A5C89E3CF30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22DA6201-2126-4547-877D-8A5C89E3CF30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22DA6201-2126-4547-877D-8A5C89E3CF30}.Release|x64.ActiveCfg = Release|x64
+		{22DA6201-2126-4547-877D-8A5C89E3CF30}.Release|x64.Build.0 = Release|x64
+		{22DA6201-2126-4547-877D-8A5C89E3CF30}.Release|x86.ActiveCfg = Release|x86
+		{22DA6201-2126-4547-877D-8A5C89E3CF30}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A451B3A6-B608-480C-BA33-2952815E31CF} = {163663EC-7245-42AF-8603-D6886C03885E}
+		{8956FDC3-41AB-41D7-A9C6-16A887E5E8F8} = {163663EC-7245-42AF-8603-D6886C03885E}
+		{22DA6201-2126-4547-877D-8A5C89E3CF30} = {163663EC-7245-42AF-8603-D6886C03885E}
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DEC8DF49-BD7A-4091-BD56-03A5FA5F1AC0}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Delivery\DeliveryShared\DeliveryShared.projitems*{22da6201-2126-4547-877d-8a5c89e3cf30}*SharedItemsImports = 5
+		Delivery\DeliveryShared\DeliveryShared.projitems*{8956fdc3-41ab-41d7-a9c6-16a887e5e8f8}*SharedItemsImports = 5
+		Delivery\DeliveryShared\DeliveryShared.projitems*{a451b3a6-b608-480c-ba33-2952815e31cf}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

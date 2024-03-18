@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <Company>Esri</Company>
+    <Description>Warehouse delivery demo application.</Description>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Configurations>Debug;Release</Configurations>
+    <ApplicationIcon>aggregator.ico</ApplicationIcon>
+    <RuntimeNugetPackageVersion>200.3.0</RuntimeNugetPackageVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Content\PreviousRenderer.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Content\Renderer.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\truck-black.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\truck-blue.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\truck-green.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\truck-purple.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\truck-red.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Esri.ArcGISRuntime" Version="$(RuntimeNugetPackageVersion)" />
+    <PackageReference Include="Esri.ArcGISRuntime.WPF" Version="$(RuntimeNugetPackageVersion)" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+  </ItemGroup>
+
+  <Import Project="..\DeliveryShared\DeliveryShared.projitems" Label="Shared" />
+
+</Project>
